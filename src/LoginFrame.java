@@ -6,15 +6,13 @@ import java.awt.event.ActionListener;
  * Created by Karol on 2015-03-10.
  */
 public class LoginFrame extends JFrame{
-    private JButton clickMeButton;
     private JPanel rootPanel;
     private JButton loginButton;
-    private JPasswordField password;
-    private JTextField login;
     private JLabel LoginLabel;
     private JLabel PasswordLabel;
-    private JButton RegisterButton;
-    private JButton zaloguj;
+    private JTextField Login;
+    private JPasswordField Password;
+    private JButton Register;
 
     public LoginFrame(){
         super("Logowanie");
@@ -25,9 +23,19 @@ public class LoginFrame extends JFrame{
         loginButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                JOptionPane.showMessageDialog(LoginFrame.this,"Zalogowałes sie!");
+                JOptionPane.showMessageDialog(LoginFrame.this, "Zalogowałes sie!");
+                String text = Login.getText().trim();
+                System.out.print(text);
             }
         });
+        Register.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                setVisible(false);
+                new RegistrationFrame().setVisible(true);
+            }
+        });
+
         setVisible(true);
 
     }

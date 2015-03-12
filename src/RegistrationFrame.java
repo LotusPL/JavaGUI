@@ -8,14 +8,14 @@ import java.awt.event.ActionListener;
  */
 public class RegistrationFrame extends JFrame{
     private JLabel LoginLabel;
-    private JTextField Login;
+    public JTextField Login;
     private JLabel PasswordLabel;
     private JPasswordField ConfirmPassword;
     private JPasswordField Password;
     private JTextField EMail;
     private JLabel ConfirmPasswordLabel;
     private JLabel EmailLaber;
-    private JButton RegisterButton;
+    public JButton RegisterButton;
     private JButton ResetButton;
     private JPanel rootPanel1;
 
@@ -31,6 +31,8 @@ public class RegistrationFrame extends JFrame{
             @Override
             public void actionPerformed(ActionEvent e) {
                 JOptionPane.showMessageDialog(RegistrationFrame.this,"Zarejestrowałeś się pomyślnie!");
+                String login = Login.getText().trim();
+                System.out.print(login);
             }
         });
 

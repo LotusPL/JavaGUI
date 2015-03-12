@@ -15,6 +15,7 @@ public class Choose extends JFrame {
         super("Wybór");
         setContentPane(rootPanel);
 
+
         pack();
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         Logowanie.addActionListener(new ActionListener() {
