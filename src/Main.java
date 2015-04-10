@@ -6,8 +6,8 @@ import java.sql.SQLException;
 public class Main {
     public static void main(String[] args) throws SQLException, ClassNotFoundException {
         //DatabaseConnector SQL = new DatabaseConnector();
-        Choose choose = new Choose();
 
+        Friends fr = new Friends();
 
     }
 }

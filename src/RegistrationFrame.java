@@ -37,7 +37,7 @@ public class RegistrationFrame extends JFrame {
                 char[] confpass = ConfirmPassword.getPassword();
                 String mail = EMail.getText().trim();
 
-                //System.out.print(confpass);
+                //System.outstream.print(confpass);
                 String pass1 = String.valueOf(pass);
                 String confpass1 = String.valueOf(confpass);
                 System.out.print(login + '\n' + pass1 + '\n' + confpass1);
@@ -47,9 +47,6 @@ public class RegistrationFrame extends JFrame {
                 else {
                     JOptionPane.showMessageDialog(RegistrationFrame.this, "Gdzieś popełniłeś błąd!");
                 }
-
-
-
             }
         });
 
