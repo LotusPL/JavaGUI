@@ -51,17 +51,14 @@ public class Client {
             }
         }
         in.start();
-        queue.add(login + " " + pass);
+        queue.add("login " + login + " " + pass);
 
 
     }
-    void Receive(String message) {
-       // System.out.println(message);
-       // chat.textArea1.insert(message,0);
-    }
+
     void Send(String message, String odbiorca){
         System.out.println(message);
-        queue.add("MSG " + odbiorca + " " + message);
+        queue.add("msg " + odbiorca + " " + message);
     }
     void Friends(String login, int status){
 

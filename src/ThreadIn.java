@@ -21,9 +21,6 @@ public class ThreadIn implements Runnable{
             else if(text.equals("error")) {
                 c.logs(false);
             }
-            if (parts[0].equals("MSG")) {
-                c.Receive(parts[1]);
-            }
             if (text.startsWith("FRIEND")) {
                 c.Friends(parts[1],Integer.valueOf(parts[2]));
             }
