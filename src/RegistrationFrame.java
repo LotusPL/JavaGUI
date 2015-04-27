@@ -1,6 +1,8 @@
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
 
 
 /**
@@ -47,6 +49,33 @@ public class RegistrationFrame extends JFrame {
                 else {
                     JOptionPane.showMessageDialog(RegistrationFrame.this, "Gdzieś popełniłeś błąd!");
                 }
+            }
+        });
+        EMail.addKeyListener(new KeyListener() {
+            @Override
+            public void keyTyped(KeyEvent e) {
+
+            }
+
+            @Override
+            public void keyPressed(KeyEvent e) {
+                if(e.getKeyCode() == KeyEvent.VK_ENTER){
+                    String login = Login.getText().trim();
+
+                    char[] pass = Password.getPassword();
+                    char[] confpass = ConfirmPassword.getPassword();
+                    String mail = EMail.getText().trim();
+
+                    //System.outstream.print(confpass);
+                    String pass1 = String.valueOf(pass);
+                    String confpass1 = String.valueOf(confpass);
+                    System.out.print(login + '\n' + pass1 + '\n' + confpass1);
+                }
+            }
+
+            @Override
+            public void keyReleased(KeyEvent e) {
+
             }
         });
 

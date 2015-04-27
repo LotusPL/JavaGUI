@@ -6,12 +6,14 @@ import javax.swing.*;
 public class Friends extends JFrame{
     public JList Friends;
     private JPanel panel1;
+    private JTextField textField1;
+    private JButton button1;
 
     Client c = new Client();
 
     public Friends()
     {
-        super("Friends");
+        super("friends");
         setContentPane(panel1);
 
         pack();
@@ -26,8 +28,6 @@ public class Friends extends JFrame{
         ChatFrame chat = new ChatFrame();
         chat.c = c;
         frame.setVisible(true);
-
-
 
     }
 }

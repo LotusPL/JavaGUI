@@ -22,7 +22,7 @@ public class ThreadIn implements Runnable{
                 c.logs(false);
             }
             if (text.startsWith("FRIEND")) {
-                c.Friends(parts[1],Integer.valueOf(parts[2]));
+                c.friends(parts[1], Integer.valueOf(parts[2]));
             }
         }
 

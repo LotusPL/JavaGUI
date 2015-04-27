@@ -32,7 +32,7 @@ public class LoginFrame extends JFrame{
                 String login = Login.getText().trim();
                 char[] pass = Password.getPassword();
                 String pass1 = String.valueOf(pass);
-
+                friends.c.connector();
                 friends.c.login(login, pass1);
 
             }

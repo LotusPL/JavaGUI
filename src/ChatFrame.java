@@ -36,7 +36,7 @@ public class ChatFrame extends JFrame{
                 if(e.getKeyCode()==KeyEvent.VK_ENTER) {
                     String message = textField1.getText().trim();
                     System.out.println("Msg");
-                    c.Send(message, nick);
+                    c.send(message, nick);
                     textField1.setText("");
                 }
             }
@@ -50,7 +50,7 @@ public class ChatFrame extends JFrame{
             @Override
             public void actionPerformed(ActionEvent e) {
                 String message = textField1.getText().trim();
-                c.Send(message,nick);
+                c.send(message, nick);
 
             }
         });

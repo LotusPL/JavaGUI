@@ -2,6 +2,8 @@ import javax.swing.*;
 import java.io.IOException;
 import java.io.PrintStream;
 import java.net.Socket;
+import java.util.LinkedList;
+import java.util.List;
 import java.util.Scanner;
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.LinkedBlockingQueue;
@@ -16,10 +18,9 @@ public class Client {
 
     LoginFrame lf;
     Friends fr;
-    ChatFrame chat;
-
-
-    void login(String login, String pass) {
+    List<ChatFrame> chat = new LinkedList<ChatFrame>();
+    //ChatFrame chat;
+    void connector(){
         try {
             socket = new Socket("localhost", 33060);
         } catch (IOException e) {
@@ -51,16 +52,22 @@ public class Client {
             }
         }
         in.start();
+    }
+
+    void login(String login, String pass) {
+
         queue.add("login " + login + " " + pass);
 
 
     }
+    void register(String login, String pass){
 
-    void Send(String message, String odbiorca){
+    }
+    void send(String message, String odbiorca){
         System.out.println(message);
         queue.add("msg " + odbiorca + " " + message);
     }
-    void Friends(String login, int status){
+    void friends(String login, int status){
 
     }
     Boolean isConnected() {
